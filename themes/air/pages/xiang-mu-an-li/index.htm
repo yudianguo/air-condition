@@ -1,0 +1,28 @@
+title = "项目案例"
+url = "/project"
+layout = "default"
+description = "项目案例-风力"
+is_hidden = 0
+
+[newsPosts project]
+pageNumber = "{{ :page }}"
+postsPerPage = 4
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+categoryFilter = "project"
+postPage = "news"
+categoryPage = "news"
+==
+{% partial "banner" %}
+<div class="mianbao">
+    <div class="container">
+        <a title="长春市玖晟制冷工程科技有限公司" href="/">长春市玖晟制冷工程科技有限公司</a>
+        &gt;<a title="项目案例" href="/project">项目案例</a>
+    </div>
+</div>
+<div class="box">
+    <div class="container">
+            {% partial "project::project-index" %}
+    </div>
+</div>

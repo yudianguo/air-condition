@@ -1,0 +1,49 @@
+;;
+[staticMenu]
+code = "main-menu"
+
+[viewBag]
+==
+<?php
+
+function onStart() {
+
+}
+?>
+==
+{##}
+<ul class="{{ class }}">
+{% for item in staticMenu.menuItems %}
+
+{% if item.items|length > 0 %}
+  <li class="uk-parent{{ ((item.isActive == 1) or (item.isChildActive == 1)) ? 'uk-active' : '' }}" data-uk-dropdown="{mode:'click'}">
+    <a href="#" {{ item.viewBag.isExternal ? 'target="_blank"' }}>{{ item.title }} <i class="uk-icon-caret-down"></i></a>
+    <div class="uk-dropdown uk-dropdown-navbar">
+      <ul class="uk-nav uk-nav-navbar">
+        {% for item2 in item.items %}
+        {% if item2.items|length > 0 %}
+        <li class="dropdown-submenu {{ ((item2.isActive == 1) or (item2.isChildActive == 1)) ? 'uk-active' : '' }}">
+          <a href="{{ item2.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>{{ item2.title }} <i class="uk-icon-caret-down"></i></a>
+      </ul>
+    </div>
+  </li>
+  {% else %}
+  <li class="{{ ((item2.isActive == 1) or (item2.isChildActive == 1)) ? 'uk-active' : '' }}">
+    <a href="{{ item2.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+      {{ item2.title }}
+    </a>
+  </li>
+  {% endif %}
+
+  {% endfor %}
+  </ul>
+  </li>
+  {% else %}
+  <li class="{{ ((item.isActive == 1) or (item.isChildActive == 1)) ? 'uk-active' : '' }}">
+    <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+      {{ item.title }}
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

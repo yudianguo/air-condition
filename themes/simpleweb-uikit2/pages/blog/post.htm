@@ -1,0 +1,28 @@
+title = "Blog Post"
+url = "/blog/post/:slug"
+layout = "default-blog"
+description = "Viewing a single blog post"
+meta_title = "Blog Post"
+meta_description = "Blog Post"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[forumEmbedTopic]
+embedCode = "{{ :slug }}"
+channelSlug = "channel-orange"
+memberPage = 404
+==
+<?php
+function onEnd()
+{
+    $this->page->title = $this->post->title;
+}
+?>
+==
+{##}
+<div class="uk-container uk-container-center uk-margin-large-top">
+    {% partial 'blog/singlepost' %}
+</div>

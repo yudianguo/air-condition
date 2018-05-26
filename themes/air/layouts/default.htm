@@ -1,0 +1,364 @@
+description = "默认基础布局"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>{{this.page.title}}</title>
+    <meta name="keywords" content="{{this.page.keywords}}"/>
+    <meta name="description" content="{{this.page.description}}"/>
+    <meta name="author" content="CmsEasy Team"/>
+    <link rel="icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/x-icon"/>
+    <link href="{{ 'assets/vendor/bootstrap/bootstrap.min.css'|theme }}" rel="stylesheet">
+
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/bootstrap-submenu.css'|theme }}" rel="stylesheet">
+    <script src="{{ 'assets/vendor/jquery.min.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/c_tool.js'|theme }}"></script>
+    <!--公共样式-->
+    {% styles %}
+</head>
+<body>
+
+<link href="{{ 'assets/css/font-awesome.css'|theme }}" rel="stylesheet">
+<script src="{{ 'assets/js/nav.js'|theme }}"></script>
+<script src="{{ 'assets/js/index.js'|theme }}"></script>
+
+
+
+<nav id="header" class="navbar navbar-default  navbar-fixed-top">
+    {% partial "header" %}
+</nav>
+<!-- Content -->
+<div id="layout-content">
+    {% page %}
+</div>
+<div class="foot">
+    {% partial "footer" %}
+</div>
+<link rel="stylesheet" href="{{ 'assets/css/template-bottom.css'|theme }}"/>
+<div class="container-fluid">
+    <div class="modal fade bs-example-modal-lg-search" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="blank5"></div>
+                </div>
+                <div class="row">
+                    <form name='search' action="index.php-case=archive&amp;act=search.html" onsubmit="search_check();"
+                          method="post">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="input-group">
+                                <input type="text" name="keyword" class="form-control" placeholder="请输入查询信息！">
+                                <span class="input-group-btn">
+<button class="btn btn-default" name='submit' type="submit">搜索</button>
+</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="servers">
+        <div id="top"></div>
+        <![endif]-->
+    </div>
+    <style>
+        #plug-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 800;
+        }
+
+        .top_bar {
+            position: fixed;
+            bottom: 0;
+            right: 0px;
+            z-index: 900;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            font-family: Helvetica, Tahoma, Arial, Microsoft YaHei, sans-serif;
+        }
+
+        .plug-menu {
+            -webkit-appearance: button;
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border-radius: 36px;
+            position: absolute;
+            bottom: 17px;
+            right: 17px;
+            z-index: 999;
+            box-shadow: 0 0 0 4px #FFFFFF, 0 2px 5px 4px rgba(0, 0, 0, 0.25);
+            -webkit-transition: -webkit-transform 200ms;
+            -webkit-transform: rotate(1deg);
+            color: #fff;
+            background-image: url("{{'assets/images/wap/plug.png'|theme}}");
+            background-repeat: no-repeat;
+            -webkit-background-size: 80% auto;
+            background-size: 80% auto;
+            background-position: center center;
+        }
+
+        .plug-menu:before {
+            font-size: 20px;
+            margin: 9px 0 0 9px;
+        }
+
+        .plug-menu:checked {
+            -webkit-transform: rotate(135deg);
+        }
+
+        .top_menu > li {
+            width: 32px;
+            height: 32px;
+            border-radius: 32px;
+            box-shadow: 0 0 0 3px #FFFFFF, 0 2px 5px 3px rgba(0, 0, 0, 0.25);
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            z-index: 900;
+            -webkit-transition: -webkit-transform 200ms;
+        }
+
+        .top_menu > li a {
+            color: #fff;
+            font-size: 20px;
+            display: block;
+            height: 100%;
+            line-height: 33px;
+            text-align: center;
+        }
+
+        .top_menu > li > a label {
+            display: none;
+        }
+
+        .top_menu > li a img {
+            display: block;
+            width: 22px;
+            height: 22px;
+            text-indent: -999px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -11px;
+            margin-left: -11px;
+        }
+
+        .top_menu > li.on:nth-of-type(1) {
+            -webkit-transform: translate(-0, -100px) rotate(720deg);
+        }
+
+        .top_menu > li.on:nth-of-type(2) {
+            -webkit-transform: translate(-47px, -81px) rotate(720deg);
+        }
+
+        .top_menu > li.on:nth-of-type(3) {
+            -webkit-transform: translate(-81px, -45px) rotate(720deg);
+        }
+
+        .top_menu > li.on:nth-of-type(4) {
+            -webkit-transform: translate(-100px, 0) rotate(720deg);
+        }
+
+        #sharemcover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 20000;
+        }
+
+        #sharemcover img {
+            position: fixed;
+            right: 18px;
+            top: 5px;
+            width: 260px;
+            height: 180px;
+            z-index: 20001;
+            border: 0;
+        }
+    </style>
+    <div class="servers-wap">
+        <div class="top_bar" style="-webkit-transform:translate3d(0,0,0)">
+            <nav>
+                <ul id="top_menu" class="top_menu">
+                    <input type="checkbox" id="plug-btn" class="plug-menu themeStyle"
+                           style="background-image:url('{{'assets/images/wap/plug.png'|theme}}');border:0px;">
+                    <li class="themeStyle out" >
+                        <a href="tel:15043052786"><img
+                                src="{{'assets/images/wap/plugmenu1.png'|theme}}"><label>电 话</label></a>
+                    </li>
+                    <li class="themeStyle out" >
+                        <a href="sms:15043052786"><img
+                                src="{{'assets/images/wap/plugmenu3.png'|theme}}"><label>短信</label></a>
+                    </li>
+                    <li class="themeStyle out" >
+                        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=814131035&amp;site=qq&amp;menu=yes"
+                           id="btn_fenxiang"><img
+                                src="{{'assets/images/wap/plugmenu5.png'|theme}}"><label>QQ号码</label></a>
+                    </li>
+                    <li class="themeStyle out" >
+                        <a href="http://luntan.cc/t/feedback"><img
+                                src="{{'assets/images/wap/plugmenu6.png'|theme}}"><label>留言</label></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="plug-wrap" style="display: none;"></div>
+    </div>
+
+    <script src="{{ 'assets/vendor/jquery.waypoints.min.js'|theme }}" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var top = $(".slide-text h1,.sub_menu").offset().top; //获取指定位置
+                var scrollTop = $(window).scrollTop();  //获取当前滑动位置
+                if (scrollTop > top) {                 //滑动到该位置时执行代码
+                    $(".navbar").addClass("active");
+                } else {
+                    $(".navbar").removeClass("active");
+                }
+            });
+        });
+        $(function () {
+            $(".plug-menu").click(function () {
+                var li = $(this).parents('ul').find('li');
+                if (li.attr("class") == "themeStyle on") {
+                    li.removeClass("themeStyle on");
+                    li.addClass("themeStyle out");
+                } else {
+                    li.removeClass("themeStyle out");
+                    li.addClass("themeStyle on");
+                }
+            });
+        });
+
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "0",
+                "bdSize": "16"
+            },
+            "slide": {"type": "slide", "bdImg": "6", "bdPos": "right", "bdTop": "100"},
+            "image": {"viewList": ["qzone", "tsina", "tqq", "renren", "weixin"], "viewText": "分享到：", "viewSize": "16"},
+            "selectShare": {"bdContainerClass": null, "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]}
+        };
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+        $(function () {
+            var lastRmenuStatus = false;
+            $(window).scroll(function () {//bug
+                var _top = $(window).scrollTop();
+                if (_top > 200) {
+                    $("#izl_rmenu").data("expanded", true);
+                } else {
+                    $("#izl_rmenu").data("expanded", false);
+                }
+                if ($("#izl_rmenu").data("expanded") != lastRmenuStatus) {
+                    lastRmenuStatus = $("#izl_rmenu").data("expanded");
+                    if (lastRmenuStatus) {
+                        $("#izl_rmenu .btn-top").slideDown();
+                    } else {
+                        $("#izl_rmenu .btn-top").slideUp();
+                    }
+                }
+            });
+        });
+        $(document).ready(function() {
+            $("#owl-demo1").owlCarousel({
+                margin : 10,
+                nav : true,
+                dots : true,
+                loop : true,
+                autoplay : false,
+                responsive:{
+                    320 : {items: 1},
+                    480 : {items: 2},
+                    768 : {items: 2},
+                    992 : {items: 3},
+                    1200 : {items: 3}
+                }
+            });
+            $("#owl-demo5").owlCarousel({
+                items: 1,
+                margin: 10,
+                nav: true,
+                dots: false,
+                loop: true,
+                autoplay: false,
+            });
+        });
+
+        $('.scroll-number').countUp();
+        $(function () {
+            $(".dropdown").mouseover(function () {
+                $(this).addClass("open");
+            });
+
+            $(".dropdown").mouseleave(function () {
+                $(this).removeClass("open");
+            })
+
+        })
+        window.onerror = function () {
+            return true;
+        }
+
+        function chkMobile(tele) {
+            var pattern = /^((13[0-9])|(15[1-3,5-9])|(17[7])|(18[0-9]))\d{8}$/
+            var strPhone = pattern.test(tele);
+            return strPhone;
+        }
+
+        function chkEmail(email) {
+            var pattern = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            var strEmail = pattern.test(email);
+            return strEmail;
+        }
+        $(function () {
+            $.stellar({});
+        });
+
+        $('#bootstrap-touch-slider').bsTouchSlider();
+    </script>
+    <script src="{{ 'assets/vendor/bootstrap/bootstrap.min.js'|theme }}"></script>
+
+    <script src="{{ 'assets/vendor/holder.min.js'|theme }}"></script>
+
+    <script src="{{ 'assets/vendor/ie10-viewport-bug-workaround.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/bootstrap-submenu.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/docs.js'|theme }}"></script>
+    <!--[if lt IE 9]><!-->
+    <script src="{{ 'assets/vendor/ie/html5shiv.min.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/ie/respond.min.js'|theme }}"></script>
+    <![endif]-->
+
+    <script src="{{ 'assets/vendor/owl.carousel.js'|theme }}"></script>
+    {% scripts %}
+</body>
+</html>

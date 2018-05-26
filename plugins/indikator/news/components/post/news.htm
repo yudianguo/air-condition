@@ -1,0 +1,27 @@
+{% set post = __SELF__.post %}
+<div style="height: 100px">
+</div>
+<div class="title">
+    <h3><a>{{ post.title }}
+        <small></small>
+    </a></h3>
+    <p></p>
+    <span>——</span>
+</div>
+<div class="container">
+
+    <hr class="featurette-divider">
+    <div class="content_tools_box">
+        <p class="content_tools">
+            <a href="javascript:CallPrint('print');">打印本文</a> &nbsp; &nbsp; &nbsp; <a href="javascript:doZoom(14)">小</a>&nbsp;
+            &nbsp;<a href="javascript:doZoom(18)">中</a>&nbsp; &nbsp;<a href="javascript:doZoom(20)">大</a>
+        </p>
+        <div class="clearfix"></div>
+    </div>
+
+
+    {% if post.content %}<div class="post-content">{{ post.content|raw }}</div>{% endif %}
+    <div class="blank60"></div>
+
+
+</div>

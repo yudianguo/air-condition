@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">长春市玖晟制冷工程科技有限公司</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand text-center"><img src="{{ 'assets/images/logo.svg'|theme }}" class="img-responsive" alt="工业产品响应是网站模板" /></a>
+
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="oen"><a href="/">网站首页</a></li>
+            <li class="oen">
+                <a href="/ywfw">业务服务</a>
+            </li>
+            <li class="oen">
+                <a href="/project">项目案例</a>
+            </li>
+            <li class="oen">
+                <a href="/news">资讯中心</a>
+            </li>
+            <li class="oen">
+                <a href="http://luntan.cc">社区</a>
+            </li>
+            <li class="oen dropdown">
+                <a id="menu-about" href="guan-yu-wo-men/index.html" data-toggle="dropdown" data-submenu="">关于我们<span
+                        class="caret"></span></a>
+                <ul class="two dropdown-menu">
+                    <li>
+                        <a title="合作伙伴" href="/partner">合作伙伴</a>
+                    </li>
+                    <li>
+                        <a title="集团简介" href="/about">集团简介</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="oen">
+                <a href="/contact">联系我们</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $.each($('#navbar').find('li'), function() {
+            if(window.location.pathname =='partner'){
+                $("#menu-about").toggleClass('active',true);
+//                $(this).toggleClass('active',  $(this).find('a').attr('href') == window.location.pathname);
+            }else{
+                $(this).toggleClass('active',  $(this).find('a').attr('href') == window.location.pathname);
+            }
+
+        });
+    });
+</script>

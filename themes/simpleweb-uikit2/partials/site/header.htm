@@ -1,0 +1,16 @@
+;;
+==
+{##}
+<header class="tm-header" data-uk-sticky>
+    <nav class="uk-navbar">
+        <a class="uk-navbar-brand uk-hidden-small uk-hidden-medium" href="{{ '/'|page }}">UIKIT 2</a>
+        {% partial 'site/headermenu' items=mainMenu.menuItems class='uk-navbar-nav uk-hidden-small uk-hidden-medium' %}
+        <a href="#offcanvas" class="uk-navbar-toggle uk-hidden-large" data-uk-offcanvas></a>
+        <div class="uk-navbar-brand uk-navbar-center uk-hidden-large">UIKIT 2</div>
+        <div id="offcanvas" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar">
+                {% partial 'site/offcanvasmobile' items=mobileMenu.menuItems %}
+            </div>
+        </div>
+    </nav>
+</header>

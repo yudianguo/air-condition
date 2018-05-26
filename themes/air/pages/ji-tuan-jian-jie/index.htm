@@ -1,0 +1,54 @@
+title = "集团简介"
+description = "集团简介"
+url = "/about"
+layout = "default"
+
+[newsPosts project_recommend]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+categoryFilter = "project"
+postPage = "news"
+categoryPage = "news"
+==
+{% partial "banner" %}
+<div class="mianbao">
+    <div class="container">
+        <a title="长春市玖晟制冷工程科技有限公司" href="/">长春市玖晟制冷工程科技有限公司</a>
+        &gt;<a title="关于我们" href="/about">关于我们</a>
+    </div>
+</div>
+
+
+<div class="title">
+    <h3 class="wow fadeInDown" data-wow-delay="0.5s"><a href="">集团简介
+            <small></small>
+        </a></h3>
+    <p class="wow fadeIn" data-wow-delay="0.5s"></p>
+    <span>——</span>
+</div>
+
+
+<div class="container">
+
+    <div class="content_tools_box">
+        <p class="content_tools">
+            <a href="javascript:CallPrint('print');">打印本文</a> &nbsp; &nbsp; &nbsp; <a href="javascript:doZoom(14)">小</a>&nbsp;
+            &nbsp;<a href="javascript:doZoom(18)">中</a>&nbsp; &nbsp;<a href="javascript:doZoom(20)">大</a>
+        </p>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="content lead" id="print">
+
+        <p>
+            长春市玖晟制冷工程科技有限公司于2018年04月19日成立,公司经营范围包括：、拆机、装机、移机、加氟、保养、清洗、更换配件、销售；冷库安装、维修；新风安装；公司本着客户至上，服务至上的宗旨。提供让客户认可满意的服务。</p>
+        <div class="blank60"></div>
+    </div>
+</div>
+<div class="blank30"></div>
+
+<hr class="featurette-divider">
+{% partial "project_recommend::project-recommend" %}'

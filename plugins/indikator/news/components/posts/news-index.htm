@@ -1,0 +1,21 @@
+{% set posts = __SELF__.posts %}
+<div class="row">
+    {% for post in posts %}
+    <div class="s7-item">
+        <a title="{{ post.title }}" href="{{ post.slug }}" target="_blank">
+            <div class="s7-img">
+                <img alt="{{ post.title }}" src="{{ post.image|media }}"
+                     onerror='this.src="{{ ' assets/images/nopic.gif'|theme }}"'/>
+            </div>
+            <div class="s7-text">
+                <h4>{{ post.title }}</h4>
+                <span></span>
+                {{ post.introductory|raw }}
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+<div class="row" style="float: right">
+    {{ posts.render|raw }}
+</div>

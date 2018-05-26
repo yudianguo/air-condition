@@ -1,0 +1,10 @@
+title = "single"
+url = "/news/:slug"
+layout = "default"
+description = "新闻单页"
+is_hidden = 0
+
+[newsPost newsPost2]
+slug = "{{ :slug }}"
+==
+{% component 'newsPost2::news' %}

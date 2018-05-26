@@ -1,0 +1,8 @@
+name: UIKIT2
+description: A plain starter template that provide features of UIKIT2-Framework.
+author: SimpleWeb
+homepage: 'https://simplewebdesign.at'
+code: Uikit2
+require:
+    - RainLab.Pages
+    - RainLab.Blog

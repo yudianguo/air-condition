@@ -1,0 +1,283 @@
+title = "首页"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[newsPosts ywfw]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+categoryFilter = "ywfw"
+postPage = "news"
+categoryPage = "news"
+
+[newsPosts project]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+categoryFilter = "project"
+postPage = "news"
+categoryPage = "news"
+
+[newsPosts team]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+categoryFilter = "team"
+postPage = "news"
+categoryPage = "news"
+
+[newsPosts partner]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+categoryFilter = "partner"
+postPage = "news"
+categoryPage = "news"
+
+[newsPosts news]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+categoryFilter = "news"
+postPage = "news"
+categoryPage = "news"
+==
+<div class="banner">
+    <link href="{{ '/assets/vendor/slide/bootstrap-touch-slider.css'|theme }}" rel="stylesheet" media="all">
+    <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel"
+         data-pause="hover" data-interval="5000">
+        <ol class="carousel-indicators">
+            <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+            <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item  active">
+                <img src="{{ 'assets/images/slide/banner01.jpg'|theme }}" alt="开创未来，空调科技 " class="slide-image">
+                <div class="slide-text slide_style_center">
+                    <h1 data-animation="animated flipInX">图纸规划路线，曲线部署 </h1>
+                    <p data-animation="animated lightSpeedIn">
+                      空调要求</p>
+                    <a href="index.html#" target="_blank" class="btn btn-primary" data-animation="animated fadeInDown">了解更多</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ 'assets/images/slide/banner02.jpg'|theme }}" alt="玖晟空调" class="slide-image">
+                <div class="slide-text slide_style_center">
+                    <h1 data-animation="animated flipInX">中央空调 </h1>
+                    <p data-animation="animated lightSpeedIn">
+                        安装现场</p>
+                    <a href="index.html#" target="_blank" class="btn btn-primary" data-animation="animated fadeInDown">了解更多</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{ 'assets/images/slide/banner03.jpg'|theme }}" alt="玖晟空调" class="slide-image">
+                <div class="slide-text slide_style_center">
+                    <h1 data-animation="animated flipInX">别墅空调 </h1>
+                    <p data-animation="animated lightSpeedIn">
+                        室内实景</p>
+                    <a href="index.html#" target="_blank" class="btn btn-primary" data-animation="animated fadeInDown">了解更多</a>
+                </div>
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="index.html#bootstrap-touch-slider" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="index.html#bootstrap-touch-slider" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <script data-cfasync="false" src="{{ 'assets/vendor/email-decode.min.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/slide/jquery.touchSwipe.min.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/slide/bootstrap-touch-slider.js'|theme }}"></script>
+</div>
+<div class="section1">
+    <div class="container">
+        <div class="title10">
+            <ul>
+                <li><a title="业务服务" href="/ywfw" target="_blank">全部</a></li>
+            </ul>
+            <h4><a title="业务服务" href="/ywfw" target="_blank">业务服务
+                <small>/&nbsp;&nbsp;SERVICE</small>
+            </a></h4>
+        </div>
+        <div class="s1">
+            <div id="owl-demo1">
+                {% partial "ywfw::home-ywfw" %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section3">
+    <div class="container">
+        <div class="col-sm-3">
+            <h4><span class="scroll-number">2,018</span>年</h4>
+            <p>成立</p>
+        </div>
+        <div class="col-sm-3">
+            <h4><span class="scroll-number">45</span>+</h4>
+            <p>服务</p>
+        </div>
+        <div class="col-sm-3">
+            <h4><span class="scroll-number">98</span>+</h4>
+            <p>项目</p>
+        </div>
+        <div class="col-sm-3">
+            <h4><span class="scroll-number">203</span>+</h4>
+            <p>客户</p>
+        </div>
+    </div>
+</div>
+<div class="section2">
+    <div class="container">
+        <div class="title10">
+            <ul>
+                <li><a title="项目案例" href="/project" target="_blank">全部</a></li>
+            </ul>
+            <h4><a title="项目案例" href="xiang-mu-an-li/index.html" target="_blank">项目案例
+                <small>/&nbsp;&nbsp;PROJECT</small>
+            </a></h4>
+        </div>
+        <div class="row">
+            {% partial "project::home-project" %}
+        </div>
+    </div>
+</div>
+<script src="{{ 'assets/vendor/stellar.js'|theme }}"></script>
+<div class="section4" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="s4-title">
+            <h4>关于我们</h4>
+            <p>ABOUT US</p>
+        </div>
+        <div class="s4-text">
+            长春玖晟制冷工程科技有限公司成立于2018年，公司坚持以技术为本的发展理念，以为用户创造价值为发展目的。本公司将一如既往的以热诚的态度，本着诚心、关心、爱心、耐心、认真的对待每一位客户，力争做到客户放心，我们安心。客户满意，我们快乐。
+        </div>
+        <a class="more" title="关于我们" href="/about" target="_blank">more</a>
+        <div class="s4-img">
+            <a title="关于我们" href="guan-yu-wo-men/index.html" target="_blank">
+                <i class="fa fa-link"></i>
+                <img alt="关于我们" src="{{ 'assets/images/home/about.jpg'|theme }}" onerror='this.src="{{ 'assets/images/nopic.gif'|theme }}"'/>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="section5">
+    <div class="container">
+        <div class="title10">
+            <ul>
+                <li><a title="团队精英" href="tuan-dui-jing-ying/index.html" target="_blank">全部</a></li>
+            </ul>
+            <h4><a title="团队精英" href="tuan-dui-jing-ying/index.html" target="_blank">团队精英
+                <small>/&nbsp;&nbsp;TEAM</small>
+            </a></h4>
+        </div>
+        <div class="s5">
+            <div id="owl-demo5">
+                {% partial "team::home-team" %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section6">
+    <div class="container">
+        <div class="title10">
+            <ul>
+                <li><a title="合作伙伴" href="he-zuo-huo-ban/index.html" target="_blank">全部</a></li>
+            </ul>
+            <h4><a title="合作伙伴" href="he-zuo-huo-ban/index.html" target="_blank">合作伙伴
+                <small>/&nbsp;&nbsp;PARTNER</small>
+            </a></h4>
+        </div>
+        <div class="s6">
+            {% partial "partner::home-partner" %}
+        </div>
+    </div>
+</div>
+<div class="section7">
+    <div class="container">
+        <div class="title10">
+            <ul>
+                <li><a title="资讯中心" href="gong-si-xin-wen/index.html" target="_blank">资讯中心</a></li>
+            </ul>
+            <h4><a title="新闻资讯" href="zi-xun-zhong-xin/index.html" target="_blank">新闻资讯
+                <small>/&nbsp;&nbsp;NEWS</small>
+            </a></h4>
+        </div>
+        <div class="row">
+            {% partial "news::home-news" %}
+        </div>
+    </div>
+</div>
+<div class="section8">
+    <div class="container">
+        <h4>如果你 想要更多的<span>了解</span>，请联系我们 15043052786</h4>
+        <p>If you want more understanding, please contact us</p>
+    </div>
+</div>
+<div class="section9">
+    <div class="container">
+        <div class="col-sm-12">
+            <div class="title10">
+                <ul>
+                    <li><a title="联系我们" href="lian-xi-wo-men/index.html" target="_blank">全部</a></li>
+                </ul>
+                <h4><a title="联系我们" href="lian-xi-wo-men/index.html" target="_blank">联系我们
+                    <small>/&nbsp;&nbsp;CONTACT</small>
+                </a></h4>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="s9-l">
+                <h5>长春玖晟制冷工程科技有限公司</h5>
+                <ul>
+                    <li>地 址：吉林省长春市南关区亚泰大街中环11区19栋4单元501室</li>
+                    <li>邮政编码：136000</li>
+                    <li>手机：15043052786</li>
+                    <li>邮 箱：<a href="../../../cdn-cgi/l/email-protection.html" class="__cf_email__"
+                               data-cfemail="a5c4c1c8cccbe5c4c1c8cccb8bc6cac8">[email&#160;protected]</a></li>
+                </ul>
+                <div class="fenxiang">
+                    <a href="index.html#" onclick="jiathis_sendto('tsina');return false;"><span
+                            class="fa fa-weibo"></span></a>
+                    <a rel="nofollow" href="http://wpa.qq.col/msgrd?v=3&amp;uin=1721768801&amp;site=qq&amp;menu=yes"
+                       target="_blank"><span class="fa fa-qq"></span></a>
+                    <a id="weixin"><span class="fa fa-weixin"></span></a>
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-sm-6">-->
+            <!--<div class="s9-r">-->
+                <!--<form class="shfw-form" method="post" action="index.php-case=guestbook&amp;act=index.html" name="form1"-->
+                      <!--id="guestbookphp">-->
+                    <!--<ul>-->
+                        <!--<li><input name="nickname" id="nickname" class="s9-input" type="text" placeholder="姓名"></li>-->
+                        <!--<li><input name="nickname" id="guesttel" class="s9-input" type="text" placeholder="联系电话"></li>-->
+                        <!--<li><input name="guestemail" id="guestemail" class="s9-input" type="text" placeholder="邮 箱">-->
+                        <!--</li>-->
+                        <!--<li><textarea id="content" name="content" class="s9-textarea" rows="4">内容</textarea></li>-->
+                        <!--<li><input type="submit" name="submit" value="提交" class="s9-btn"></li>-->
+                    <!--</ul>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>

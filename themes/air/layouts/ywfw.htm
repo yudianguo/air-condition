@@ -1,0 +1,297 @@
+description = "默认基础布局"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>{{this.page.title}}</title>
+    <meta name="keywords" content="{{this.page.keywords}}"/>
+    <meta name="description" content="{{this.page.description}}"/>
+    <meta name="author" content="CmsEasy Team"/>
+    <link rel="icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.png'|theme }}" type="image/x-icon"/>
+    <link href="{{ 'assets/vendor/bootstrap/bootstrap.min.css'|theme }}" rel="stylesheet">
+
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/bootstrap-submenu.css'|theme }}" rel="stylesheet">
+    <script src="{{ 'assets/vendor/jquery.min.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/c_tool.js'|theme }}"></script>
+    <!--公共样式-->
+    {% styles %}
+</head>
+<body>
+
+<link href="{{ 'assets/css/font-awesome.css'|theme }}" rel="stylesheet">
+<script src="{{ 'assets/js/nav.js'|theme }}"></script>
+<script src="{{ 'assets/js/index.js'|theme }}"></script>
+
+
+
+<nav id="header" class="navbar navbar-default  navbar-fixed-top">
+    {% partial "header" %}
+</nav>
+<!-- Content -->
+<div id="layout-content">
+    <div class="mianbao">
+        <div class="container">
+            <a title="长春市玖晟制冷工程科技有限公司" href="/ywfw">长春市玖晟制冷工程科技有限公司</a>
+            &gt;<a title="业务服务" href="index.html">业务服务</a>
+        </div>
+    </div>
+    {% page %}
+
+    <div class="blank60"></div>
+
+
+    <hr class="featurette-divider">
+
+    <div class="title">
+        <h3 class="wow fadeInDown" data-wow-delay="0.5s"><a href="../xiang-mu-an-li/index.html">项目案例
+            <small>PROJECT</small>
+        </a></h3>
+        <p class="wow fadeIn" data-wow-delay="0.5s"></p>
+        <span>——</span>
+    </div>
+
+    <div class="container">
+        <div class="blank30"></div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <p style="line-height: 1.8;margin-bottom: 20px;">
+                    德国XX股份公司创立于1847年，是全球电子电气工程领域的领先企业。自1950年进入中国，140余年来以创新的技术、卓越的解决方案和产品坚持不懈地对中国的发展提供全面支持，并以出众的品质和令人信赖的可</p>
+                <p><a title="" href="../xiang-mu-an-li/index.html" class="content-bottom-list-more">Learn more</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                <div class="row">
+                    <div class="post-masonry col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <a title="城市规划" href="../shang-ye/show_248.html" class="img-auto">
+                            <img class="img-responsive" alt="城市规划" src="{{ 'assets/images/home/smoke.jpg'|theme }}"
+                                 onerror='this.src="{{ 'assets/images/nopic.gif'|theme }}"'/>
+                            <h4><font style="color:;">城市规划</font></h4>
+                        </a>
+                    </div>
+                    <div class="post-masonry col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <a title="石油工程" href="../shang-ye/show_247.html" class="img-auto">
+                            <img class="img-responsive" alt="石油工程" src="{{ 'assets/images/home/smoke.jpg'|theme }}"
+                                 onerror='this.src="{{ 'assets/images/nopic.gif'|theme }}"'/>
+                            <h4><font style="color:;">石油工程</font></h4>
+                        </a>
+                    </div>
+                    <div class="post-masonry col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <a title="通信工程" href="../shang-ye/show_244.html" class="img-auto">
+                            <img class="img-responsive" alt="通信工程" src="{{ 'assets/images/home/smoke.jpg'|theme }}"
+                                 onerror='this.src="{{ 'assets/images/nopic.gif'|theme }}"'/>
+                            <h4><font style="color:;">通信工程</font></h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blank60"></div>
+
+
+    <script src="{{ ['assets/vendor/jQuery.autoIMG.js',]|theme }}"></script>
+
+</div>
+<div class="foot">
+    {% partial "footer" %}
+</div>
+<link rel="stylesheet" href="{{ 'assets/css/template-bottom.css'|theme }}"/>
+<div class="container-fluid">
+    <div class="modal fade bs-example-modal-lg-search" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <div class="blank5"></div>
+                </div>
+                <div class="row">
+                    <form name='search' action="index.php-case=archive&amp;act=search.html" onsubmit="search_check();"
+                          method="post">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="input-group">
+                                <input type="text" name="keyword" class="form-control" placeholder="请输入查询信息！">
+                                <span class="input-group-btn">
+<button class="btn btn-default" name='submit' type="submit">搜索</button>
+</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="servers">
+        <div id="top"></div>
+        <![endif]-->
+    </div>
+    <div class="servers-wap">
+        <div class="top_bar" style="-webkit-transform:translate3d(0,0,0)">
+            <nav>
+                <ul id="top_menu" class="top_menu">
+                    <input type="checkbox" id="plug-btn" class="plug-menu themeStyle"
+                           style="background-image:url('{{'assets/images/wap/plug.png'|theme}}');border:0px;">
+                    <li class="themeStyle out" >
+                        <a href="tel:400-400-4000"><img
+                                src="{{'assets/images/wap/plugmenu1.png'|theme}}"><label>电 话</label></a>
+                    </li>
+                    <li class="themeStyle out" >
+                        <a href="sms:18888888888"><img
+                                src="{{'assets/images/wap/plugmenu3.png'|theme}}"><label>短信</label></a>
+                    </li>
+                    <li class="themeStyle out" >
+                        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1721768801&amp;site=qq&amp;menu=yes"
+                           id="btn_fenxiang"><img
+                                src="{{'assets/images/wap/plugmenu5.png'|theme}}"><label>QQ号码</label></a>
+                    </li>
+                    <li class="themeStyle out" >
+                        <a href="index.php-case=guestbook&amp;act=index.html"><img
+                                src="{{'assets/images/wap/plugmenu6.png'|theme}}"><label>留言</label></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="plug-wrap" style="display: none;"></div>
+    </div>
+
+    <script src="{{ 'assets/vendor/jquery.waypoints.min.js'|theme }}" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var top = $(".slide-text h1,.sub_menu").offset().top; //获取指定位置
+                var scrollTop = $(window).scrollTop();  //获取当前滑动位置
+                if (scrollTop > top) {                 //滑动到该位置时执行代码
+                    $(".navbar").addClass("active");
+                } else {
+                    $(".navbar").removeClass("active");
+                }
+            });
+        });
+        $(function () {
+            $(".plug-menu").click(function () {
+                var li = $(this).parents('ul').find('li');
+                if (li.attr("class") == "themeStyle on") {
+                    li.removeClass("themeStyle on");
+                    li.addClass("themeStyle out");
+                } else {
+                    li.removeClass("themeStyle out");
+                    li.addClass("themeStyle on");
+                }
+            });
+        });
+
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "0",
+                "bdSize": "16"
+            },
+            "slide": {"type": "slide", "bdImg": "6", "bdPos": "right", "bdTop": "100"},
+            "image": {"viewList": ["qzone", "tsina", "tqq", "renren", "weixin"], "viewText": "分享到：", "viewSize": "16"},
+            "selectShare": {"bdContainerClass": null, "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]}
+        };
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+        $(function () {
+            var lastRmenuStatus = false;
+            $(window).scroll(function () {//bug
+                var _top = $(window).scrollTop();
+                if (_top > 200) {
+                    $("#izl_rmenu").data("expanded", true);
+                } else {
+                    $("#izl_rmenu").data("expanded", false);
+                }
+                if ($("#izl_rmenu").data("expanded") != lastRmenuStatus) {
+                    lastRmenuStatus = $("#izl_rmenu").data("expanded");
+                    if (lastRmenuStatus) {
+                        $("#izl_rmenu .btn-top").slideDown();
+                    } else {
+                        $("#izl_rmenu .btn-top").slideUp();
+                    }
+                }
+            });
+        });
+        $(document).ready(function() {
+            $("#owl-demo1").owlCarousel({
+                margin : 10,
+                nav : true,
+                dots : true,
+                loop : true,
+                autoplay : false,
+                responsive:{
+                    320 : {items: 1},
+                    480 : {items: 2},
+                    768 : {items: 2},
+                    992 : {items: 3},
+                    1200 : {items: 3}
+                }
+            });
+            $("#owl-demo5").owlCarousel({
+                items: 1,
+                margin: 10,
+                nav: true,
+                dots: false,
+                loop: true,
+                autoplay: false,
+            });
+        });
+
+        $('.scroll-number').countUp();
+        $(function () {
+            $(".dropdown").mouseover(function () {
+                $(this).addClass("open");
+            });
+
+            $(".dropdown").mouseleave(function () {
+                $(this).removeClass("open");
+            })
+
+        })
+        window.onerror = function () {
+            return true;
+        }
+
+        function chkMobile(tele) {
+            var pattern = /^((13[0-9])|(15[1-3,5-9])|(17[7])|(18[0-9]))\d{8}$/
+            var strPhone = pattern.test(tele);
+            return strPhone;
+        }
+
+        function chkEmail(email) {
+            var pattern = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            var strEmail = pattern.test(email);
+            return strEmail;
+        }
+        $(function () {
+            $.stellar({});
+        });
+
+        $('#bootstrap-touch-slider').bsTouchSlider();
+    </script>
+    <script src="{{ 'assets/vendor/bootstrap/bootstrap.min.js'|theme }}"></script>
+
+    <script src="{{ 'assets/vendor/holder.min.js'|theme }}"></script>
+
+    <script src="{{ 'assets/vendor/ie10-viewport-bug-workaround.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/bootstrap-submenu.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/docs.js'|theme }}"></script>
+    <!--[if lt IE 9]><!-->
+    <script src="{{ 'assets/vendor/ie/html5shiv.min.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/ie/respond.min.js'|theme }}"></script>
+    <![endif]-->
+
+    <script src="{{ 'assets/vendor/owl.carousel.js'|theme }}"></script>
+</body>
+</html>

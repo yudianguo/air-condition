@@ -1,0 +1,30 @@
+title = "业务服务"
+url = "/ywfw"
+layout = "default"
+description = "业务服务"
+is_hidden = 0
+
+[newsPosts ywfw]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+categoryFilter = "ywfw"
+postPage = "news"
+categoryPage = "news"
+==
+<!DOCTYPE html>
+<div class="mianbao">
+    <div class="container">
+        <a title="长春市玖晟制冷工程科技有限公司" href="../index.html">长春市玖晟制冷工程科技有限公司</a>
+        &gt;<a title="业务服务" href="index.html">业务服务</a>
+    </div>
+</div>
+<div class="box">
+    <div class="container">
+        <div class="row">
+            {% partial "ywfw::ywfw-index" %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+title = "公司新闻"
+url = "/news"
+layout = "default"
+description = "公司新闻"
+is_hidden = 0
+
+[newsPosts news]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+postFeatured = 0
+categoryFilter = "news"
+postPage = "news"
+categoryPage = "news"
+==
+{% partial "banner" %}
+<div class="mianbao">
+    <div class="container">
+        <a title="长春市玖晟制冷工程科技有限公司" href="/">长春市玖晟制冷工程科技有限公司</a>
+        &gt;<a title="资讯中心" href="/news">资讯中心</a>
+    </div>
+</div>
+<div class="box">
+    <div class="container">
+        {% partial "news::news-index" %}
+    </div>
+</div>

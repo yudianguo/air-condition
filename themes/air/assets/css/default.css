@@ -1,0 +1,288 @@
+.izl-rmenu {
+    position: fixed;
+    left: 0;
+    margin-right: 20px;
+    bottom: 0px;
+    padding-bottom: 0px;
+    z-index: 999;
+}
+
+.izl-rmenu .sbtn {
+    width: 72px;
+    height: 73px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    position: relative;
+}
+
+.izl-rmenu .btn-qq {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_qq.png") 0px 0px no-repeat;
+    background-color: #6da9de;
+    color: #FFF;
+}
+
+.izl-rmenu .btn-qq:hover {
+    background-color: #488bc7;
+    color: #FFF;
+}
+
+.izl-rmenu .btn-qq .qq {
+    background-color: #488bc7;
+    position: absolute;
+    width: 160px;
+    right: -160px;
+    top: 0px;
+    line-height: 73px;
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+}
+
+.izl-rmenu .btn-qq a {
+    color: #FFF;
+    font-size: 14px;
+}
+
+.izl-rmenu .btn-wx {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_wx.png") 0px 0px no-repeat;
+    background-color: #78c340;
+}
+
+.izl-rmenu .btn-wx:hover {
+    background-color: #58a81c;
+}
+
+.izl-rmenu .btn-wx .pic {
+    position: absolute;
+    right: -160px;
+    top: 0px;
+    display: none;
+    width: 140px;
+    height: 140px;
+}
+
+.izl-rmenu .btn-phone {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_phone.png") 0px 0px no-repeat;
+    background-color: #fbb01f;
+}
+
+.izl-rmenu .btn-phone:hover {
+    background-color: #ff811b;
+}
+
+.izl-rmenu .btn-phone .phone {
+    background-color: #ff811b;
+    position: absolute;
+    width: 160px;
+    right: -160px;
+    top: 0px;
+    line-height: 73px;
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+}
+
+.izl-rmenu .btn-ali {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_ali.png") 0px 0px no-repeat;
+    background-color: #B8860B;
+}
+
+.izl-rmenu .btn-ali:hover {
+    background-color: #808000;
+}
+
+.izl-rmenu a.btn-ali, .izl-rmenu a.btn-ali:visited {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_ali.png") 0px 0px no-repeat;
+    background-color: #B8860B;
+    text-decoration: none;
+    display: block;
+}
+
+.izl-rmenu .btn-wangwang {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_wangwang.png") 0px 0px no-repeat;
+    background-color: #FFD700;
+}
+
+.izl-rmenu .btn-wangwang:hover {
+    background-color: #DAA520;
+}
+
+.izl-rmenu a.btn-wangwang, .izl-rmenu a.btn-wangwang:visited {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_wangwang.png") 0px 0px no-repeat;
+    background-color: #FFD700;
+    text-decoration: none;
+    display: block;
+}
+
+.izl-rmenu .btn-skype {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_skype.png") 0px 0px no-repeat;
+    background-color: #FF69B4;
+}
+
+.izl-rmenu .btn-skype:hover {
+    background-color: #8B008B;
+}
+
+.izl-rmenu a.btn-skype, .izl-rmenu a.btn-skype:visited {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_skype.png") 0px 0px no-repeat;
+    background-color: #FF69B4;
+    text-decoration: none;
+    display: block;
+}
+
+.izl-rmenu .btn-web {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_web.png") 0px 0px no-repeat;
+    background-color: #008a46;
+}
+
+.izl-rmenu .btn-web:hover {
+    background-color: #00663a;
+}
+
+.izl-rmenu a.btn-web, .izl-rmenu a.btn-web:visited {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_web.png") 0px 0px no-repeat;
+    background-color: #008a46;
+    text-decoration: none;
+    display: block;
+}
+
+.izl-rmenu .btn-top {
+    background: url("template/CmsEasy_V_473/skin/images/servers/metro_color/r_top.png") 0px 0px no-repeat;
+    background-color: #666666;
+    display: none;
+}
+
+.izl-rmenu .btn-top:hover {
+    background-color: #444;
+}
+
+<!-- S server-wap -->
+#plug-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 800;
+}
+
+.top_bar {
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    z-index: 900;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: Helvetica, Tahoma, Arial, Microsoft YaHei, sans-serif;
+}
+
+.plug-menu {
+    -webkit-appearance: button;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    position: absolute;
+    bottom: 17px;
+    right: 17px;
+    z-index: 999;
+    box-shadow: 0 0 0 4px #FFFFFF, 0 2px 5px 4px rgba(0, 0, 0, 0.25);
+
+    -webkit-transition: -webkit-transform 200ms;
+    -webkit-transform: rotate(1deg);
+    color: #fff;
+    background-image: url('template/CmsEasy_V_473/skin/images/wao/plug.png.html');
+    background-repeat: no-repeat;
+    -webkit-background-size: 80% auto;
+    background-size: 80% auto;
+    background-position: center center;
+}
+
+.plug-menu:before {
+    font-size: 20px;
+    margin: 9px 0 0 9px;
+}
+
+.plug-menu:checked {
+    -webkit-transform: rotate(135deg);
+}
+
+.top_menu > li {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    box-shadow: 0 0 0 3px #FFFFFF, 0 2px 5px 3px rgba(0, 0, 0, 0.25);
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    z-index: 900;
+    -webkit-transition: -webkit-transform 200ms;
+}
+
+.top_menu > li a {
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    height: 100%;
+    line-height: 33px;
+    text-align: center;
+}
+
+.top_menu > li > a label {
+    display: none;
+}
+
+.top_menu > li a img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    text-indent: -999px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -11px;
+    margin-left: -11px;
+}
+
+.top_menu > li.on:nth-of-type(1) {
+    -webkit-transform: translate(-0, -100px) rotate(720deg);
+}
+
+.top_menu > li.on:nth-of-type(2) {
+    -webkit-transform: translate(-47px, -81px) rotate(720deg);
+}
+
+.top_menu > li.on:nth-of-type(3) {
+    -webkit-transform: translate(-81px, -45px) rotate(720deg);
+}
+
+.top_menu > li.on:nth-of-type(4) {
+    -webkit-transform: translate(-100px, 0) rotate(720deg);
+}
+
+#sharemcover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 20000;
+}
+
+#sharemcover img {
+    position: fixed;
+    right: 18px;
+    top: 5px;
+    width: 260px;
+    height: 180px;
+    z-index: 20001;
+    border: 0;
+}
+<!-- E server-wap -->

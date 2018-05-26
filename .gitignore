@@ -1,0 +1,10 @@
+/storage
+/config/database.php
+/storage/*.key
+/vendor
+/modules
+#/config
+/bootstrap
+/themes/demo
+/themes/*/content
+/themes/*/meta

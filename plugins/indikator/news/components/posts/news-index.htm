@@ -2,7 +2,7 @@
 <div class="row">
     {% for post in posts %}
     <div class="s7-item">
-        <a title="{{ post.title }}" href="{{ post.slug }}" target="_blank">
+        <a title="{{ post.title }}" href="/{{ postPage }}/{{ post.slug }}" target="_blank">
             <div class="s7-img">
                 <img alt="{{ post.title }}" src="{{ post.image|media }}"
                      onerror='this.src="{{ ' assets/images/nopic.gif'|theme }}"'/>
